@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="'col-md-6">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{mlist.img.url}}" alt="Card image cap" height="450">
+
+            </div>
+        </div>
+             <div>
+                 <h6>{{mlist.desc}}</h6>
+                 <h5>year:{{mlist.year}}</h5>
+                 <a href="{% url 'movieapp:update' mlist.id %}" class="btn btn-warning">Update</a>
+                 <a href="{% url 'movieapp:delete' mlist.id %}" class="btn btn-danger">Delete</a>
+             </div>
+
+    </div>
+</div>
+{% endblock %}
+
